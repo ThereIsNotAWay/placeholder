@@ -12,15 +12,10 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px 100px;
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
 	z-index: 100;
-}
-
-header a {
-		padding: 10px 15px;
 }
 
 section {
@@ -29,16 +24,31 @@ section {
 	display: grid;
 	align-content: center;
 	place-items: center;
-	background-color: aqua;
+}
+
+nav {
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 1%, rgba(19,19,19,1) 55%, rgba(82,82,82,1) 75%, rgba(111,111,111,1) 85%, rgba(128,128,128,1) 90%, rgba(154,154,154,1) 95%, rgba(174,174,174,1) 100%);
+	width: 100%;
+	padding: 5px 20px;
+	display: flex;
+	align-items: center;
 }
 
 nav a {
 	position: relative;
-	text-decoration: none;
-	padding-left: 10px;
-	padding-right: 10px;
-	font-size: 20px;
-	
+	text-decoration: none;	
+}
+
+.navlinks {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.navlinks li {
+	padding: 15px 15px;
+	font-size: 25px;
 }
 
 nav a::before {
@@ -48,12 +58,14 @@ nav a::before {
 	left: 0;
 	width: 0;
 	height: 2px;
-	background: black;
+	background: white;
+	font-size: 20px;
 	transition: 0.3s;
 }
 
 nav a:hover::before {
 	width: 100%;
+
 }
 
 .dropdown {
@@ -62,8 +74,6 @@ nav a:hover::before {
 
 .dropdown a {
 	display: block;
-	border-color: blue;
-
 }
 
 .dropdown .dd-content {
@@ -80,23 +90,19 @@ nav a:hover::before {
 
 
 
+.logo img{
+	width: 60px;
+}
+
+.logo a {
+	display: flex;
+	align-items: center;
+	font-size: 25px;
+	width: fit-content;
+}
+
 .logo {
-	text-decoration: none;
-	font-size: 20px;
-	width: 50px;
-	height: 50px;
-
-}
-
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.down {
-  transform: rotate(45deg);
+	flex: 1;
 }
 
 footer {
@@ -113,3 +119,63 @@ footer ul li {
 	margin: 20px;
 }
 
+
+.placeholder {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	position: relative;
+	right: 400px;
+	color: white;
+	background-color: black;
+	width: 500px;
+	height: 300px;
+	padding: 25px;
+
+}
+
+.placeholder h {
+	font-size: 25px;
+}
+
+.placeholder h2 {
+	font-size: 40px;
+}
+
+.placeholder button {
+	color: white;
+	justify-content: center;
+	align-items: center;
+	width: 125px;
+	height: 40px;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.placeholder button:nth-child(1) {
+	background: rgb(180, 51, 51);
+	border: none;
+}
+
+.placeholder button:nth-child(2) {
+	border-color: rgb(180, 51, 51);
+	background: none;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: grey;
+}
+
+a:active {
+  color: white;
+}
