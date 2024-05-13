@@ -18,15 +18,17 @@ const hiddenElementsRight = document.querySelectorAll('.hidden-right');
 hiddenElementsLeft.forEach((el) => observer.observe(el));
 hiddenElementsRight.forEach((el) => observer.observe(el)); */
 
+
 function activeLink (location)
 {
   switch(location)
   {
     case "Form":
       window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSchFxqZAkcTmViyRaQyjdHztcAAeQj3RTU6qOOspBVS-yFOFQ/viewform?usp=sf_link";
+      break;
   }
 }
-
+/*
 function changeBackgroundImage (competition)
 {
   let image;
@@ -47,8 +49,4 @@ function changeBackgroundImage (competition)
   }
   //document.getElementById('background-competition').classList.add("placeholder");
   document.getElementById('background-competition').style.backgroundImage = image;
-  
-  
-  
-
-}
+}*/
