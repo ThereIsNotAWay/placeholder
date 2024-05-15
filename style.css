@@ -26,6 +26,7 @@ section {
 	align-content: center;
 	place-items: center;
 	background-color: rgba(0,0,0,.75);
+	color: white;
 }
 
 nav {
