@@ -240,6 +240,7 @@ footer ul li {
 
 #background-competition {
 	background-color: rgba(0, 0, 0, 0.5);
+	height: 110vh;
 }
 
 @media (max-width: 600px) {
