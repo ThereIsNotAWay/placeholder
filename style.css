@@ -51,10 +51,10 @@ nav a {
 
 .navlinks li {
 	padding: 15px 15px;
-	font-size: 25px;
+	font-size: 20px;
 }
 
-nav a::before {
+nav li a::before {
 	content: "";
 	position: absolute;
 	top: 100%;
@@ -102,7 +102,7 @@ nav a:hover::before {
 .logo a {
 	display: flex;
 	align-items: center;
-	font-size: 25px;
+	font-size: 20px;
 	width: fit-content;
 }
 
