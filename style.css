@@ -71,6 +71,8 @@ nav a:hover::before {
 
 }
 
+
+
 .dropdown {
 	display: inline-block;
 }
@@ -223,14 +225,42 @@ footer ul li {
 
 .logo-links:hover {
 	width: 115%;
-	translate: -20px;
+	translate: -25px;
 }
 
 .logo-links:hover :nth-child(1) ~ #background-competition{
 	background-color: blue;
 }
 
-	
+.hidden-left {
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: all 1s;
+}
+
+.hidden-right {
+	opacity: 0;
+	transform: translateX(100%);
+	transition: all 1s;
+}
+
+.show {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.test:nth-child(2) {
+	transition-delay: 200ms;
+}
+
+.test:nth-child(3) {
+	transition-delay: 400ms;
+}
+
+.test:nth-child(4) {
+	transition-delay: 600ms;
+}
+
 #home-image {
 	background-image: linear-gradient(to right, rgba(0,0,0, 0.8), rgba(255, 255, 255, 0.15)), url("images/Drone\ hovering\ over\ water.jpg");
 	background-repeat: no-repeat;
