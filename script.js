@@ -1,3 +1,10 @@
+const nav = document.querySelector('.nav')
+fetch('/header.html')
+.then(res => res.text())
+.then(data => {
+  nav.innerHTMl = data;
+})
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
       if (entry.isIntersecting)
