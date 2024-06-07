@@ -1,10 +1,3 @@
-const nav = document.querySelector('.nav')
-fetch('/header.html')
-.then(res => res.text())
-.then(data => {
-  nav.innerHTMl = data;
-})
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
       if (entry.isIntersecting)
@@ -32,6 +25,9 @@ function activeLink (location)
   {
     case "Form":
       window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSchFxqZAkcTmViyRaQyjdHztcAAeQj3RTU6qOOspBVS-yFOFQ/viewform?usp=sf_link";
+      break;
+    case "Contact":
+      window.location.href = "";
       break;
   }
 }
