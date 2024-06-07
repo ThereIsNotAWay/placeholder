@@ -1,7 +1,7 @@
 const header = document.querySelector("header");
 const footer = document.querySelector(".footer-section");
 const loadElement = 
-fetch('/common_layout/header.html')
+fetch('/placeholder/common_layout/header.html')
   .then(res => {
     if (res.ok) {
       return res.text();
@@ -10,7 +10,7 @@ fetch('/common_layout/header.html')
   .then(html => {
     header.innerHTML = html;
   });
-fetch('/common_layout/footer.html')
+fetch('/placeholder/common_layout/footer.html')
   .then(res => {
     if (res.ok) {
       return res.text();
