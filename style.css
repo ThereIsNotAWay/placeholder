@@ -206,9 +206,6 @@ footer {
 	justify-content: center;
 }
 
-.footer-bottom span {
-	
-}
 
 .socials-icons {
 	width: 150px;
@@ -224,6 +221,7 @@ footer {
 
 .footer-bottom .title img {
 	width: 60px;
+	padding-right: 10px;
 }
 
 .home-overlay-box {
