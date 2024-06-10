@@ -20,6 +20,17 @@ fetch('/placeholder/common_layout/footer.html')
     footer.innerHTML = html;
   });
 
+/*
+const funnier = (element, fileName) => {
+  fetch(`/common_layout/${fileName}.html`)
+    .then(res => {
+      return res.text();
+    })
+    .then(html => {
+      element.innerHTML = html;
+    })
+};*/
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
       if (entry.isIntersecting)
@@ -46,10 +57,11 @@ function activeLink (location)
   switch(location)
   {
     case "Form":
-      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSchFxqZAkcTmViyRaQyjdHztcAAeQj3RTU6qOOspBVS-yFOFQ/viewform?usp=sf_link";
+      window.open("https://docs.google.com/forms/d/e/1FAIpQLSchFxqZAkcTmViyRaQyjdHztcAAeQj3RTU6qOOspBVS-yFOFQ/viewform?usp=sf_link");
+      window.location.href = "about.html";
       break;
     case "Contact":
-      window.location.href = "";
+      window.location.href = "contacts.html";
       break;
   }
 }

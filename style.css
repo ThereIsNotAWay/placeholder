@@ -16,7 +16,7 @@ header {
 	justify-content: space-between;
 	align-content: center;
 	z-index: 100;
-	height: 10vh;
+	height: 72px;
 }
 
 section {
@@ -116,9 +116,8 @@ nav a:hover::before {
 	background: linear-gradient(180deg, rgba(0,0,0,0.8) 1%, rgba(19,19,19,0.9) 55%, rgba(24,24,24,1) 100%);
 	color: #fff;
 	min-height: 250px;
-	border-style: solid;
-	border-width: medium;
-	border-color: rgba(19,19,19,1);
+	max-height: 350px;
+	
 }
 
 
@@ -131,7 +130,6 @@ nav a:hover::before {
 }
 
 .footer-page-links li span {
-	padding-top: 35px;
 	padding-bottom: 10px;
 }
 
@@ -140,13 +138,74 @@ nav a:hover::before {
 }
 
 .footer-page-links ul {
-	height: 63px;
+	height: 200px;
 }
 
 .footer-page-links {
 	position: relative;
 	top: 5px;
 }
+
+.footer-top {
+	height: 250px;
+}
+
+.footer-top button {
+	width: 100px;
+	height: 30px;
+	border-radius: 4px;
+	transition: 0.5s;
+}
+
+.footer-top button:hover {
+	box-shadow: 6px 4px 6px 4px;
+	border-style: solid;
+	border-width: none;
+}
+
+.footer-top button:active {
+	animation: button-jump 1.5s ease-in 0.0s 1 normal both;
+}
+
+@keyframes button-jump {
+	5% {
+		transform: rotateZ(5deg);
+	}
+
+	30% {
+		transform: translateY(-250px) rotateZ(720deg);
+	}
+
+	55% {
+		transform: translateY(0px);
+	}
+
+	77.5% {
+		transform: translateX(150px) translateY(-40px) rotateZ(360deg);
+	}
+
+	100% {
+		transform: translateX(300px) translateY(0px) rotateZ(900deg);
+	}
+
+}
+
+.footer-bottom {
+	height: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-width: medium;
+	border-color: rgba(19,19,19,0.4);
+	background-color: rgba(24,24,24, 0.6);
+}
+
+.socials-icons {
+	width: 150px;
+	align-self: self-start;
+}
+
+
 
 .home-overlay-box {
 	display: flex;
@@ -163,10 +222,11 @@ nav a:hover::before {
 
 .home-overlay-box h {
 	font-size: 25px;
+	color: rgb(180, 51, 51);
 }
 
 .home-overlay-box h2 {
-	font-size: 40px;
+	font-size: 60px;
 }
 
 .home-overlay-box .buttons {
@@ -237,6 +297,12 @@ nav a:hover::before {
 	align-items: center;
 }
 
+.center-all {
+	display: grid;
+	place-items: center;
+	align-content: center;
+}
+
 .logo-links {
 	width: 100%;
 	transition: all 0.5s;
@@ -294,6 +360,39 @@ nav a:hover::before {
 	height: 110vh;
 }
 
+#news-section-image, #news-section-text {
+	width: 700px;
+	height: 500px;
+	text-align: left;
+}
+
+#news-section-image {
+	margin-bottom: 100px; 
+	
+}
+
+#news-section-image img{
+	border-style: solid;
+	border-radius: 4px;
+	border-color: rgb(180, 51, 51);
+}
+
+#news-section-text {
+	margin: 0px;
+}
+
+#news-section-text h1 {
+	padding-bottom: 10px;
+}
+
+#news-section-text span {
+	line-height: 25px;
+}
+
+#news-article {
+	min-height: 80rem;
+}
+
 @media (max-width: 600px) {
 
 	header {
@@ -315,14 +414,17 @@ nav a:hover::before {
 
 a:link {
   color: white;
+	text-decoration: none;
+	transition: 0.2s;
 }
 
 a:visited {
   color: white;
 }
 
-a:hover {
-  color: grey;
+a:hover:not(header a) {
+  color: rgb(180, 51, 51);
+	text-decoration: underline;
 }
 
 a:active {
