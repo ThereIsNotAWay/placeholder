@@ -192,12 +192,22 @@ nav a:hover::before {
 
 .footer-bottom {
 	height: 75px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	
 	border-width: medium;
 	border-color: rgba(19,19,19,0.4);
 	background-color: rgba(24,24,24, 0.6);
+}
+
+footer {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-bottom span {
+	
 }
 
 .socials-icons {
@@ -206,6 +216,15 @@ nav a:hover::before {
 }
 
 
+.footer-bottom .title {
+	width: 380px;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-bottom .title img {
+	width: 60px;
+}
 
 .home-overlay-box {
 	display: flex;
@@ -286,14 +305,12 @@ nav a:hover::before {
 .flex-horizontal {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
 	align-items: center;
 }
 
 .flex-column {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
 }
 
@@ -303,12 +320,17 @@ nav a:hover::before {
 	align-content: center;
 }
 
+.logo-images {
+	justify-content: space-between;
+}
+
 .logo-links {
 	width: 100%;
 	transition: all 0.5s;
 	display: flex;
-	justify-content: space-evenly;	
 }
+
+
 
 .logo-links:hover {
 	width: 115%;
