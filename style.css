@@ -18,19 +18,227 @@ header {
 	height: 72px;
 }
 
+iframe {
+	border-radius: 20px;
+	border-style: solid;
+	border-width: 5px;
+	transition: 0.5s all;
+}
+
+iframe:hover {
+	border-color: rgb(180, 51, 51);
+	transform: translateY(-5px);
+}
+
+img:not(nav img) {
+	transition: 0.5s all;
+}
+
+.img-border {
+	border-style: solid;
+	border-radius: 20px;
+	border-width: 5px;
+	
+}
+
+
+
+img:not(nav img):hover {
+	
+} 
+
+
+
 section {
-	min-width: 500px;
-	height: 100dvh;
-	display: grid;
+	min-width: 400px;
+	min-height: 100dvh;
+	/* padding-top: 20px;
+	padding-bottom: 20px; */
+	/*display: grid;
 	align-content: center;
-	place-items: center;
+	place-items: center;*/
 	background-color: rgba(0,0,0,.75);
 	color: white;
 }
 
-.section-1 {
-	height: 110dvh;
+.section-1-offset {
+	height: calc(100dvh + 72px);
 }
+
+.section-video-text {
+	min-height: 65dvh;
+	
+	div {
+		width: 90%;
+		min-width: 250px;
+		height: 60dvh;
+		padding: 10px;
+
+
+		div {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 100%;
+			
+		}
+
+		div .video {
+			height: 70%;
+		}
+
+		div .text {
+			height: 20%;
+		}
+
+	}
+
+}
+
+.section-text-image {
+	min-height: 65dvh;
+	text-align: center;
+	div {
+		width: 90%;
+		/* min-width: 250px; */
+		height: 60dvh;
+		padding: 10px;
+
+
+		div {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 100%;
+			
+		}
+
+		.image {
+			width: 60dvw;
+		}
+
+		.text {
+			width: 30dvw;
+
+			span {
+				padding-top: 30px;
+			}
+
+		}
+
+	}
+
+}
+
+.columns {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	max-width: 100%;
+}
+
+.column {
+	flex: 1;
+	text-align: center;
+	margin-top: 60px;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 60px;
+	padding: 20px;
+	max-width: 100%;
+	min-height: 400px;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: whitesmoke;
+	line-height: 30px;
+	border-radius: 30px;
+	transition: 0.6s all;
+
+}
+
+.column.starter:hover {
+	transform: translateX(-5px) translateY(5px);
+
+}
+
+.column.starter img  {
+	padding-top: 5%;
+}
+.column.starter a > img {
+	padding-top: 10%;
+}
+.column.starter h1 { 
+	padding-top: 5%;
+	padding-bottom: 5%;
+	
+}
+
+.column.starter a {
+	transition: 0.65s all;
+	color: rgb(57, 167, 181);
+}
+
+.column.starter a:hover {
+	color: rgb(187, 231, 231);
+}
+
+.column .video {
+	height: 50dvh;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.column .text {
+	height: 30dvh;
+	h1 {
+		padding-bottom: 30px;
+	}
+
+	h1, span {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+
+.section-small-header-text {
+	min-height: 40dvh;
+	
+	text-align: center;
+
+	div {
+		border-radius: 20px;
+		width: 65%;
+		min-width: none;
+		height: 30dvh;
+		display: grid;
+		align-content: center;
+		place-items: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		/* background-color: rgb(180, 51, 51); */
+		div {
+
+
+			height: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+	}
+}
+
+.section-multiple-items {
+	
+}
+
+.overflow-x {
+	overflow-x: scroll;
+	img {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 
 nav {
 	background: rgb(0,0,0);
@@ -218,13 +426,13 @@ footer {
 }
 
 
-.footer-bottom .title {
+ .title {
 	width: 380px;
 	display: flex;
 	justify-content: center;
 }
 
-.footer-bottom .title img {
+ .title img {
 	width: 80px;
 	padding-right: 10px;
 }
@@ -319,12 +527,62 @@ footer {
 
 .center-all {
 	display: grid;
-	place-items: center;
 	align-content: center;
+	place-items: center;
+
 }
+
+.grid {
+	padding-left: 5%;
+	padding-right: 5%;
+	display: grid;
+	grid-template-rows: repeat(6, 100px);
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	background-color: aqua;
+	justify-content: center;
+}
+
+.three-row-two-column:nth-child(1) {
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
+}
+
+.three-row-two-column:nth-child(2) {
+	grid-row: 2 / 3;
+	grid-column: 1 / 2;
+}
+
+.three-row-two-column:nth-child(3) {
+	grid-row: 3 / 4;
+	grid-column: 1 / 2;
+}
+
+.three-row-two-column:nth-child(4) {
+	grid-row: 1 / 2;
+	grid-column: 2 / 3;
+}
+
+.three-row-two-column:nth-child(5) {
+	grid-row: 2 / 3;
+	grid-column: 2 / 3;
+}
+
+.three-row-two-column:nth-child(6) {
+	grid-row: 3 / 4;
+	grid-column: 2 / 3;
+}
+
+
+
+.grid div {
+	background-color: red;
+}
+
 
 .logo-images {
 	justify-content: space-between;
+	min-width: 67.5%;
+	min-height: 30vh;
 }
 
 .logo-links {
@@ -336,16 +594,29 @@ footer {
 
 
 .logo-links:hover {
-	width: 115%;
-	translate: -25px;
+	transform: scale(1.1, 1.1);
 }
 
-.logo-links:hover :nth-child(1) ~ #background-competition{
+/* .logo-links:hover :nth-child(1) ~ #background-competition{
 	background-color: blue;
-}
+} */
 
 .code-showcase > div {
 	overflow-y: hidden;
+	max-width: 1500px;
+
+}
+
+.code-showcase div text {
+	font-size: auto;
+}
+
+.code-showcase div:nth-child(2) {
+	min-width: 500px;
+}
+
+.code-showcase {
+	background-color: rgba(19,19,19,0.4);
 }
 
 .hidden-left {
@@ -371,16 +642,24 @@ footer {
 	transform: translateX(0) translateY(0);
 }
 
-.test:nth-child(2) {
+.delay:nth-child(2) {
+	transition-delay: 100ms;
+}
+
+.delay:nth-child(3) {
 	transition-delay: 200ms;
 }
 
-.test:nth-child(3) {
+.delay:nth-child(4) {
+	transition-delay: 300ms;
+}
+
+.delay:nth-child(5) {
 	transition-delay: 400ms;
 }
 
-.test:nth-child(4) {
-	transition-delay: 600ms;
+.delay:nth-child(6) {
+	transition-delay: 500ms;
 }
 
 #home-image {
@@ -390,9 +669,38 @@ footer {
 	height: 105vh;
 }
 
+#contacts-background {
+	background-image: linear-gradient(to right, rgba(0,0,0, 0.8), rgba(255, 255, 255, 0.15)), url("images/code-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#contacts-background > * {
+	font-size: calc(50px + 5%);
+}
+
+#ftc-background {
+	background-image: linear-gradient(360deg, rgba(0,0,0, 0.8), rgba(0, 0, 0, 0.2)), url("images/FTC-Arena.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 75dvh;
+	margin-top: 72px;
+	text-align: center;
+}
+
+#ftc-background h1 {
+	font-size: 50px;
+	padding-bottom: 50px;
+}
+
+#ftc-background span {
+	font-size: 30px;
+	padding-bottom: 80px;
+}
+
 #background-competition {
 	background-color: rgba(0, 0, 0, 0.5);
-	height: 110vh;
+	
 }
 
 #news-section-image, #news-section-text {
@@ -445,6 +753,13 @@ footer {
 		background-image: none;
 		background-color: black;
 	}
+	
+	.section-small-header-text {
+		font-size: smaller;
+		div {
+			width: 70%;
+		}
+	}
 
 }
 
@@ -452,6 +767,9 @@ footer {
 	.code-showcase {
 		flex-direction: column;
 	}
+
+	
+	
 
 	
 
