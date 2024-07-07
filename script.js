@@ -1,27 +1,6 @@
 const header = document.querySelector("header");
 const footer = document.querySelector(".footer-section");
-const loadElement = 
-fetch('/placeholder/common_layout/header.html')
-  .then(res => {
-    if (res.ok) {
-      return res.text();
-    }
-  })
-  .then(html => {
-    header.innerHTML = html;
-  });
-fetch('/placeholder/common_layout/footer.html')
-  .then(res => {
-    if (res.ok) {
-      return res.text();
-    }
-  })
-  .then(html => {
-    footer.innerHTML = html;
-  });
-
-/*
-const funnier = (element, fileName) => {
+const loadElement = (element, fileName) => {
   fetch(`/common_layout/${fileName}.html`)
     .then(res => {
       return res.text();
@@ -29,7 +8,10 @@ const funnier = (element, fileName) => {
     .then(html => {
       element.innerHTML = html;
     })
-};*/
+};
+loadElement(header, 'header');
+loadElement(footer, 'footer');
+
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -42,14 +24,23 @@ const observer = new IntersectionObserver((entries) => {
           entry.target.classList.remove('show');
       }
   });
-}, {
+}/*, {
   rootMargin: "-55px",
-});
+}*/);
 
-const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
-const hiddenElementsRight = document.querySelectorAll('.hidden-right');
-hiddenElementsLeft.forEach((el) => observer.observe(el));
-hiddenElementsRight.forEach((el) => observer.observe(el));
+const hiddenElements = (elements) => {
+  elements.forEach((el) => observer.observe(el));
+}
+hiddenElements(document.querySelectorAll('.hidden-left'));
+hiddenElements(document.querySelectorAll('.hidden-right'));
+hiddenElements(document.querySelectorAll('.hidden-popup'));
+hiddenElements(document.querySelectorAll('.hidden-popdown'));
+// const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
+// const hiddenElementsRight = document.querySelectorAll('.hidden-right');
+// const hiddenElementsPopup = document.querySelectorAll('.hidden-popup');
+// hiddenElementsLeft.forEach((el) => observer.observe(el)), hiddenElementsRight.forEach((el) => observer.observe(el));
+// hiddenElementsPopup.forEach((el) => observer.observe(el));
+
 
 
 function activeLink (location)
@@ -63,6 +54,10 @@ function activeLink (location)
     case "Contact":
       window.location.href = "contacts.html";
       break;
+    case "Shop":
+      window.open("");
+      break;
+    
   }
 }
 /*
