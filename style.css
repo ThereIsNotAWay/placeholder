@@ -43,15 +43,9 @@ img:not(nav img) {
 
 
 
-img:not(nav img):hover {
-	
-} 
-
-
-
 section {
 	min-width: 400px;
-	min-height: 100dvh;
+	/* min-height: 100dvh; */
 	/* padding-top: 20px;
 	padding-bottom: 20px; */
 	/*display: grid;
@@ -121,11 +115,16 @@ section {
 			span {
 				padding-top: 30px;
 			}
-
 		}
-
 	}
+}
 
+.section-columns {
+	height: fit-content;
+}
+
+.section-single-column {
+	text-align: center;
 }
 
 .columns {
@@ -143,6 +142,7 @@ section {
 	margin-right: 30px;
 	margin-bottom: 60px;
 	padding: 20px;
+	min-width: 400px;
 	max-width: 100%;
 	min-height: 400px;
 	background-color: rgba(0, 0, 0, 0.2);
@@ -154,19 +154,18 @@ section {
 }
 
 .column.starter:hover {
-	transform: translateX(-5px) translateY(5px);
-
+	transform: translateY(6px);
 }
 
 .column.starter img  {
-	padding-top: 5%;
+	margin-top: 5%;
 }
 .column.starter a > img {
-	padding-top: 10%;
+	margin-top: 10%;
 }
 .column.starter h1 { 
-	padding-top: 5%;
-	padding-bottom: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 	
 }
 
@@ -683,8 +682,7 @@ footer {
 	background-image: linear-gradient(360deg, rgba(0,0,0, 0.8), rgba(0, 0, 0, 0.2)), url("images/FTC-Arena.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 75dvh;
-	margin-top: 72px;
+	height: 90dvh;
 	text-align: center;
 }
 
