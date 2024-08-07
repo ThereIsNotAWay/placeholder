@@ -11,6 +11,7 @@ const loadElement = (element, fileName) => {
 };
 loadElement(header, 'header');
 loadElement(footer, 'footer');
+loadElement(document.querySelector(".wip"), 'wip_page');
 
 
 const observer = new IntersectionObserver((entries) => {
@@ -60,6 +61,49 @@ function activeLink (location)
     
   }
 }
+
+
+
+function changeSplineQuality (quality, spline) {
+  const splineObj = document.getElementsByClassName(spline);
+  let i = 0;
+  for (i = 0; i < splineObj.length; i++)
+    {
+      splineObj[i].style.display = "none";  
+    }
+  if (quality == "2d")
+  {
+    splineObj[0].style.display = "block";
+  }
+  else if (quality == "3d")
+  {
+    splineObj[1].style.display = "inherit";
+  }
+}
+
+/*
+function showerAndHider (class1, class2, whicher)
+{
+  const classes1 = document.getElementsByClassName(class1);
+  const classes2 = document.getElementsByClassName(class2);
+  for (var i = 0; i < classes1.length; i++)
+  {
+    classes1[i].style.display = "none";
+    classes2[i].style.display = "none";
+
+  }
+  if (whicher == 1)
+  {
+    classes1[classes1.length-1].style.display = "block";
+
+  }
+  else if (whicher == 2)
+    {
+
+      classes2[classes2.length-1].style.display = "block";
+    }
+}*/
+
 /*
 function changeBackgroundImage (competition)
 {
