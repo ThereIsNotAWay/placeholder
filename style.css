@@ -640,7 +640,7 @@ footer {
 }
 
 .text-image .text p {
-  filter: contrast(0.8);
+  filter: contrast(0.65);
   letter-spacing: 4px;
   line-height: 40px;
   margin-bottom: 12px;
@@ -658,7 +658,17 @@ footer {
 .image-background img {
   width: 100%;
   height: 100%;
+}
+
+
+.image-background .text h1, .image-background .text h2 {
   position: relative;
+  top: 50px;
+}
+
+.image-background .text p {
+  position: relative;
+  bottom: 50px;
 }
 
 .home-column {
@@ -674,7 +684,7 @@ footer {
   /* border-color: rgba(193, 45, 45, 1); */
 	border-color: rgba(149, 9, 9, 1);
   /* border-image-source: linear-gradient(135deg, #C12D2D, #5B1515); */
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 
 
@@ -719,6 +729,7 @@ footer {
 }
 
 .spline-description span {
+  filter: contrast(0.65);
   letter-spacing: 2px;
 }
 
@@ -817,7 +828,7 @@ footer {
 }
 
 .competition-image-logo {
-  
+  margin-bottom: 12px;
 }
 
 .competition-info-box h2 {
@@ -1192,20 +1203,23 @@ footer {
   color: #fff;
   display: none;
   position: absolute;
-  width: 100%; 
+  max-width: 1440px;
+  min-width: 375px;
+  width: 100%;
   height: 100dvh; 
-  background-color: rgba(149, 9, 9, 1);
+  background: linear-gradient(45deg, rgba(0,0,0, 1) 25%, rgb(149, 9, 9));
 }
 
 #nav-screen #nav-screen-links {
-  margin-top: 40px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 #nav-screen #nav-screen-links a {
+  width: fit-content;
   padding: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-size: 20px;
 }
 
