@@ -68,9 +68,9 @@ function changeSplineQuality (quality, spline) {
   const splineObj = document.getElementsByClassName(spline);
   let i = 0;
   for (i = 0; i < splineObj.length; i++)
-    {
+  {
       splineObj[i].style.display = "none";  
-    }
+  }
   if (quality == "2d")
   {
     splineObj[0].style.display = "block";
@@ -79,6 +79,11 @@ function changeSplineQuality (quality, spline) {
   {
     splineObj[1].style.display = "inherit";
   }
+}
+
+function showNavLinks (status) {
+  const navBox = document.getElementById('nav-screen');
+  navBox.style.display = status;
 }
 
 /*
