@@ -614,8 +614,17 @@ footer {
   min-width: 350px;
   width: 95%;
   min-height: 300px;
+
+}
+
+.text-image.center-space {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.text-image.spread-space {
+  display: flex;
+  justify-content: space-around;
 }
 
 .text-image .text {
@@ -631,12 +640,13 @@ footer {
 
 .text-image .text h1 {
   font-size: 32px;
-  margin-bottom: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .text-image .text h2 {
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .text-image .text p {
@@ -653,6 +663,14 @@ footer {
   width: 100%;
   min-height: 300px;
   max-height: 600px;
+}
+
+.text-image .taller-image {
+  min-width: 250px;
+  max-width: 500px;
+  width: 100%;
+  min-height: 325px;
+  max-height: 650px;
 }
 
 .image-background img {
