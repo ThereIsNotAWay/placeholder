@@ -99,8 +99,6 @@ function iterateSplineObj (number) {
   splines[currentSpline].style.display = "block";
 }
 
-iterateSplineObj(0);
-
 function showNavLinks (status) {
   const navBox = document.getElementById('nav-screen');
   navBox.style.display = status;
