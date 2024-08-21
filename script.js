@@ -50,7 +50,7 @@ function activeLink (location)
   {
     case "Form":
       window.open("https://docs.google.com/forms/d/e/1FAIpQLSchFxqZAkcTmViyRaQyjdHztcAAeQj3RTU6qOOspBVS-yFOFQ/viewform?usp=sf_link");
-      window.location.href = "about.html";
+      // window.location.href = "about.html";
       break;
     case "Contact":
       window.location.href = "contacts.html";
@@ -80,6 +80,26 @@ function changeSplineQuality (quality, spline) {
     splineObj[1].style.display = "inherit";
   }
 }
+
+let currentSpline = 0;
+
+function iterateSplineObj (number) {
+  const splines = document.getElementsByClassName('spline-display');
+  currentSpline += number;
+  let i = 0;
+  for (i = 0; i < splines.length; i++) {
+    splines[i].style.display = "none";
+  }
+  if (currentSpline < 0) {
+    currentSpline = splines.length-1;
+  }
+  else if (currentSpline > splines.length-1) {
+    currentSpline = 0;
+  }
+  splines[currentSpline].style.display = "block";
+}
+
+iterateSplineObj(0);
 
 function showNavLinks (status) {
   const navBox = document.getElementById('nav-screen');
