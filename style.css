@@ -114,6 +114,10 @@ section {
 	margin-top: 72px;
 }
 
+.section-bottom-no-pad {
+	padding-bottom: 0px;
+}
+
 .section-video-text {
 	min-height: 65dvh;
 	
@@ -687,10 +691,10 @@ footer {
 
 .text-image .taller-image {
   min-width: 250px;
-  max-width: 500px;
+  max-width: 450px;
   width: 100%;
   min-height: 325px;
-  max-height: 600px;
+  max-height: 550px;
 }
 
 .text-image .taller-image img {
@@ -703,12 +707,22 @@ footer {
 	max-width: 1440px;
   position: relative;
   isolation: isolate;
+	/* background-color:red; */
 }
 
-.image-background img {
+.image-background .image-container {
 	max-width: 1440px;
-
+	min-width: 375px;
+	width: 100%;
+	min-height: 250px;
+	max-height: 600px;
+	height: 100%;
 }
+
+.image-background .image-container img {
+	height: 100%;
+}
+
 
 /* .image-background::after {
   content: '';
@@ -719,39 +733,86 @@ footer {
   transform: skewY(5deg) translateY(1.25rem); 
   
 }*/
+.image-background#joiner{
+	background-image: url('/placeholder/images/man-pointing.jpg');
+	background-repeat: no-repeat;
+	background-position: 0% 80%;
+	background-size: cover;
+	min-height: 90dvh;
+	width: 100%;
+}
 
-.image-background .wide-image {
-  max-width: 1440px;
-  min-width: 375px;
+.image-background .container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	min-height: 90dvh;
+}
+
+.image-background .text, .image-background .headers, .image-background .image-background-buttons {
+	text-align: center;
+	padding: 12px;
+	/* max-width: 600px;
+	width: 100%;
+	min-width: 100px; */
+	/* background-color: aqua; */
 
 }
 
-.image-background .tall-image {
-
+.image-background .headers {
+	
 }
 
-
-.image-background .text h1 {
-  position: absolute;
-  transform: translate(-50%, -50%); 
-  top: 5%; 
-  left:50%;
+.image-background .headers h1 {
+	font-size: 52px;
+	margin-bottom: 8px;
+ 
 } 
 
-.image-background .text h2 {
-  position: absolute;
-  transform: translate(-50%, -50%); 
-  top: 8%; 
-  left:50%;
+.image-background .headers h2 {
+  font-size: 36px;
+  
+}
+
+.image-background .text  {
+	position: relative;
+	top: 100px;
 }
 
 .image-background .text p {
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-
+	font-size: 28px;
 }
+
+.image-background .image-background-buttons  {
+	gap: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	button {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		color:  white;
+		height: 40px;
+		padding: 12px;
+		letter-spacing: 1px;
+		border-radius: 4px;
+		border-style: none;
+		background: rgba(149, 9, 9, 1);
+		transition: 0.4s;
+	}
+
+	button:hover {
+		transform: translateY(10px);
+	}
+
+	button:active {
+		transform: scale(1.1, 1.1);
+	}
+	
+}
+
 
 .home-column {
   min-width: 300px;
@@ -1026,7 +1087,7 @@ footer {
 .text-image-vertical .image {
 
 	max-width: 1200px;
-	min-width: 300px;
+	min-width: 375px;
 	
 }
 
@@ -1072,7 +1133,7 @@ footer {
 .role-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
   margin-top: 40px;
   min-width: 250px;
   max-width: 1200px;
@@ -1219,7 +1280,7 @@ footer {
 	background-color: rgba(149, 9, 9, 0.7);
 	border: rgba(149, 9, 9, 1);
 	border-style: solid;
-	border-width: 4px;
+	border-width: 6px;
 }
 
 .flex-wrap {
@@ -1497,6 +1558,50 @@ footer {
     background-color: rgba(0, 0, 0, 0.95);
   }
 
+	.text-image-vertical .text h1 {
+		font-size: 40px;
+		margin-bottom: 12px;
+	}
+	
+	.text-image-vertical .text p {
+		font-size: 16px;
+		letter-spacing: 1px;
+		line-height: 32px;
+		margin-bottom: 36px;
+	}
+
+	/* .image-background img {
+		max-width: 600px;
+		min-width: 375px;
+	} */
+
+	.image-background .headers h1{
+		font-size: 32px;
+	}
+  
+	.image-background .headers h2 { 
+		font-size: 24px;
+	}
+
+	.image-background .text {
+		background-color: rgba(149, 9, 9, 0.7);
+		border: rgba(149, 9, 9, 1);
+	}
+
+	.image-background .text p {
+		font-size: 16px;
+	}
+
+	.image-background .image-container {
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+
+	.image-background .image-container img {
+		object-fit: contain;
+		object-position: 0 -60px;
+		height: 150%;
+	}
 }
 
 #nav-screen {
@@ -1546,7 +1651,7 @@ footer {
 
 }
 
-@media (max-width: 900) {
+/* @media (max-width: 900) {
 	.code-showcase {
 		flex-direction: column;
 	}
@@ -1561,7 +1666,7 @@ footer {
   }
 	
 
-}
+} */
 
 a:link {
   color: white;
