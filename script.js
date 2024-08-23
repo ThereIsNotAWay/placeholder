@@ -104,6 +104,32 @@ function showNavLinks (status) {
   navBox.style.display = status;
 }
 
+function sendEmail() {
+  let parms = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value
+  };
+
+  if (parms.name !== "" && parms.email !== "" && parms.subject !== "" && parms.message !== "") {
+    emailjs.send("service_1kcgm4f","template_jtnkdy4", parms).then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert("Your email was sent successfully!");
+      },
+      (error) => {
+        console.log('FAILED...', error);
+        alert("Something went wrong...");
+      },
+    );
+  }
+  else {
+    window.alert("You left something blank.");
+  }
+  
+}
+
 /*
 function showerAndHider (class1, class2, whicher)
 {
