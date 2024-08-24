@@ -1564,16 +1564,19 @@ footer {
 
 
 .logo-images {
-	justify-content: space-between;
-	min-width: 67.5%;
+	justify-content: space-evenly;
+	width: 100%;
 	min-height: 30vh;
+	margin-bottom: 2.5rem;
 }
 
 .logo-links {
+	padding: 20px;
 	width: 100%;
   min-height: 60px;
 	transition: all 0.5s;
 	display: flex;
+	margin-bottom: 5rem;
 }
 
 
@@ -1897,7 +1900,7 @@ footer {
 .nav-block {
   background-color: #fff;
   width: 40px; 
-  height: 8px;
+  height: 4px;
   margin-bottom: 4px;
 }
 
@@ -1908,6 +1911,7 @@ footer {
 
   #nav-icon {
     display: flex;
+		align-items: center;
   }
 
 }
