@@ -108,7 +108,7 @@ section {
 }
 
 .light-section {
-	background-color: rgb(240, 240, 240);
+	background-color: rgb(220, 220, 220);
 	color: rgba(0, 0, 0, 0.95);
 }
 
@@ -706,6 +706,7 @@ footer {
 
 .image-background {
 	max-width: 1440px;
+	max-height: 800px;
   position: relative;
   isolation: isolate;
 	/* background-color:red; */
@@ -1391,12 +1392,101 @@ footer {
 	text-decoration: none;
 }
 
+.gallery-seasons-container {
+	max-width: 1000px;
+	min-width: 350px;
+	width: fit-content;	
+	min-height: 120px;
+	max-height: 180px;
+	padding: 24px;
+	display: flex;
+	gap: 100px;
+	/* justify-content: space-evenly; */
+}
+
+.season-container {
+	min-width: 100px;
+	max-width: 150px;
+	width: 100%;
+}
+
+.season-container > * {
+	font-size: 1.5em;
+}
+
+.photo-gallery {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	padding: 20px;
+}
+
+.photo-gallery-img {
+	min-width: 350px;
+	max-width: 600px;
+	min-height: 350px;
+	max-height: 600px;
+	padding: 16px;
+}
+
+.photo-gallery-img.taller-img {
+	min-width: 250px;
+	max-width: 350px;
+	min-height: 300px;
+	max-height: 500px;
+	padding: 16px;
+}
+
+.photo-gallery-img.wider-img {
+	min-width: 300px;
+	max-width: 600px;
+	min-height: 250px;
+	max-height: 450px;
+	padding: 16px;
+}
+
+.photo-gallery-img-caption {
+	position: absolute;
+}
+
 .background-border {
 	background-color: rgba(149, 9, 9, 0.7);
 	border: rgba(149, 9, 9, 1);
 	border-style: solid;
 	border-width: 6px;
 }
+
+.headers {
+	margin-bottom: 40px;
+}
+
+.headers h1 {
+	font-size:xx-large;
+	margin-bottom: 8px;
+
+}
+
+
+
+.headers h2 {
+	/* margin-bottom: 20px; */
+}
+
+.title-headers {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.title-headers h1 {
+	padding: 12px;
+	font-size: xx-large;
+	margin-bottom: 40px;
+}
+
+.title-headers h2 {
+	font-size: x-large;
+}
+
 
 .flex-wrap {
   flex-wrap: wrap;
@@ -1663,6 +1753,11 @@ footer {
 
 .news-section-text p {
 	line-height: 32px;
+	letter-spacing: 2px;
+}
+
+.news-blank-section {
+	height: 30dvh;
 }
 
 /* .news-article {
