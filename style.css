@@ -231,6 +231,7 @@ section {
 	flex-flow: row wrap;
 	justify-content: center;
 	max-width: 100%;
+	padding: 20px;
 }
 
 .column {
@@ -1042,6 +1043,14 @@ nav a:hover::before {
 	margin-bottom: 20px;
 }
 
+.comp-row {
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	width: 95%;
+
+}
+
 .two-column-text {
 	max-width: 1440px;
 	min-width: 350px;
@@ -1824,6 +1833,8 @@ nav a:hover::before {
 
 	}
 
+	
+
   .spline-container {
     width: 350px;
     height: 300px;
@@ -1967,7 +1978,11 @@ nav a:hover::before {
 		gap: 2rem;
 		padding: 20px;
 	}
-	
+	.comp-row {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+	}
 
 }
 
