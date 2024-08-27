@@ -113,7 +113,7 @@ function sendEmail() {
   };
 
   if (parms.name !== "" && parms.email !== "" && parms.subject !== "" && parms.message !== "") {
-    emailjs.send("service_1kcgm4f","template_jtnkdy4", parms).then(
+    emailjs.send("serve__","temple__", parms).then(
       (response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert("Your email was sent successfully!");
