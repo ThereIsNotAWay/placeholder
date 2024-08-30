@@ -302,7 +302,7 @@ section {
 	text-align: center;
 	padding: 20px;
 	max-width: 50rem;
-	height: 15rem;
+	height: max(15rem, fit-content);
 }
 
 .resource-competition-about .headers h1 {
@@ -1225,7 +1225,14 @@ nav a:hover::before {
 
 	max-width: 1200px;
 	min-width: 375px;
+	min-height: 300px;
+	max-height: 600px;
 	
+}
+
+.text-image-vertical .video  {
+	width: 80%;
+	height: 35rem;
 }
 
 .competition-box {
@@ -1817,12 +1824,20 @@ nav a:hover::before {
 
 #ftc-background h1 {
 	font-size: 50px;
-	padding-bottom: 50px;
+	margin-bottom: 52px;
 }
 
 #ftc-background span {
 	font-size: 30px;
-	padding-bottom: 80px;
+	margin-bottom: 80px;
+}
+
+.frc-background-1 {
+	background-image: linear-gradient(360deg, rgba(0,0,0, 0.8), rgba(0, 0, 0, 0.2)), url("images/frc-2019-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100dvh;
+	text-align: center;
 }
 
 #background-competition {
@@ -1943,6 +1958,7 @@ nav a:hover::before {
 		line-height: 1.4rem;
 	}
 	
+
 
   .spline-container {
     width: 350px;
@@ -2091,6 +2107,11 @@ nav a:hover::before {
 		display: flex;
 		justify-content: center;
 		gap: 2rem;
+	}
+
+	.text-image-vertical .video  {
+		width: 100%;
+		height: 20rem;
 	}
 
 }
