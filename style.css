@@ -116,6 +116,10 @@ section {
 	margin-top: 72px;
 }
 
+.section-top-no-pad {
+	padding-top: 0px;
+}
+
 .section-bottom-no-pad {
 	padding-bottom: 0px;
 }
@@ -300,7 +304,7 @@ section {
 	display: flex;
 	background-color: rgb(40, 40, 40);
 	text-align: center;
-	margin-top: 60px;
+	/* margin-top: 3rem; */
 	padding: 20px;
 	max-width: 50rem;
 	height: max(15rem, fit-content);
@@ -1815,7 +1819,7 @@ nav a:hover::before {
 	font-size: calc(50px + 5%);
 }
 
-#ftc-background {
+/* #ftc-background {
 	background-image: linear-gradient(360deg, rgba(0,0,0, 0.8), rgba(0, 0, 0, 0.2)), url("images/FTC-Arena.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1831,18 +1835,27 @@ nav a:hover::before {
 #ftc-background span {
 	font-size: 30px;
 	margin-bottom: 80px;
+} */
+
+
+
+.competition-image-background {
+	position: relative; 
+	height: 100dvh; 
+	width: 100%;
 }
 
-.frc-background-1 {
+/* .frc-background-1 {
 	background-image: 	 url("images/frc-2019-background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100dvh;
 	text-align: center;
-}
+	padding-top: 0px; 
+}*/
 
 .seaglide-background {
-	background-image: linear-gradient(360deg, rgba(0,0,0, 0.8), rgba(0, 0, 0, 0.2)), url("");
+	background-image: linear-gradient(360deg, rgba(0,0,0, 0.6), rgba(0, 0, 0, 0.2)), url("images/deep-ocean.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100dvh;
