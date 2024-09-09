@@ -1943,6 +1943,51 @@ nav a:hover::before {
 	min-height: 80rem;
 } */
 
+.blockquote-container {
+	padding: 20px;
+	min-width: 350px;
+	max-width: 900px;
+	width: 100%;
+	min-height: 20px;
+	display: flex;
+	justify-content: space-around;
+	gap: 2rem;
+
+}
+
+.blockquote-container .image {
+	width: 210px;
+	height: 280px;
+}
+
+blockquote {
+	min-width: 200px;
+	max-width: 600px;
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+	line-height: 2rem;
+	
+}
+
+blockquote p::before {
+	content: open-quote;
+}
+
+blockquote p::after {
+	content: close-quote;
+}
+
+blockquote span::before {
+	content: ' — ';
+}
+
+blockquote span {
+
+	display: block;
+	margin-top: 1rem;
+	margin-left: 1.5rem;
+}
+
 @media (max-width: 600px) {
 
 	header {
