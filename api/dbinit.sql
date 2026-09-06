@@ -11,8 +11,10 @@ CREATE TABLE resources (
 
 CREATE TABLE gallery (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    public_id STRING NOT NULL UNIQUE,
     category STRING NOT NULL,
     title STRING NOT NULL,
     description STRING NOT NULL,
     src STRING NOT NULL
+    created_at TIMESTAMP DEFAULT NOW()
 );
